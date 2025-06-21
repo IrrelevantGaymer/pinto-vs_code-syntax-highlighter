@@ -1,0 +1,25 @@
+{
+  "name": "pinto",
+  "displayName": "pinto",
+  "description": "syntax highlighting for pinto",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.101.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "pinto",
+      "aliases": ["pinto", "pinto"],
+      "extensions": ["pinto"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "pinto",
+      "scopeName": "source.pinto",
+      "path": "./syntaxes/pinto.tmLanguage.json"
+    }]
+  }
+}

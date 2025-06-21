@@ -1,0 +1,89 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "pinto",
+	"patterns": [
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#names"
+		}
+	],
+	"repository": {
+		"comments": {
+            "patterns": [
+                {
+                    "name": "comment.line.double-slash.pinto",
+                    "match": "(//).*$",
+                    "captures": {
+                        "1": {
+                            "name": "punctuation.definition.comment.pinto"
+                        }
+                    }
+                }
+            ]
+        },
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.pinto",
+					"match": "\\bcase\\b"
+				},
+				{
+					"name": "keyword.operator.arithmetic.pinto",
+					"match": "(\\+|\\*|->|<-|-|\\.)"
+				},
+				{
+					"name": "keyword.other.pinto",
+					"match": "\\b(for|in|where|map|start|with|let)\\b"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.pinto",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.pinto",
+					"match": "\\\\."
+				}
+			]
+		},
+		"names": {
+			"patterns": [
+				{
+					"name": "variable.name.pinto",
+					"match": "\\b[a-z][a-zA-Z0-9]*\\b"
+				},
+				{
+					"name": "entity.name.type.pinto",
+					"match": "\\b[A-Z][a-zA-Z0-9]*\\b"
+				},
+				{
+					"name": "constant.numeric.pinto",
+					"match": "\\b0b[0-1]+\\b"
+				},
+				{
+					"name": "constant.numeric.pinto",
+					"match": "\\b0o[0-7]+\\b"
+				},
+				{
+					"name": "constant.numeric.pinto",
+					"match": "\\b0x[0-9a-fA-F]+\\b"
+				},
+				{
+					"name": "constant.numeric.pinto",
+					"match": "\\b[0-9]+\\b"
+				}
+			]
+		}
+	},
+	"scopeName": "source.pinto"
+}
